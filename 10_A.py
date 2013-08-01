@@ -21,6 +21,7 @@ class MainWindow(QFrame):
         applicationLayout.addLayout(buttonsLayout)
         applicationLayout.addWidget(dataEntry)
         self.setLayout(applicationLayout)
+        self.setWindowTitle('Temperature Converter')
         self.show()
 
 if __name__ == '__main__':
