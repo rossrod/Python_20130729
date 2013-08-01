@@ -3,8 +3,9 @@
 import sys
 
 from PySide.QtGui import (
-    QApplication, QFrame, QRadioButton,
-    QVBoxLayout
+    QApplication,
+    QFrame, QRadioButton, QLineEdit,
+    QVBoxLayout, QHBoxLayout
 )
 
 class MainWindow(QFrame):
@@ -15,7 +16,11 @@ class MainWindow(QFrame):
         fahrenheitButton = QRadioButton('Fahrenheit')
         buttonsLayout.addWidget(celsiusButton)
         buttonsLayout.addWidget(fahrenheitButton)
-        self.setLayout(buttonsLayout)
+        dataEntry = QLineEdit()
+        applicationLayout = QHBoxLayout()
+        applicationLayout.addLayout(buttonsLayout)
+        applicationLayout.addWidget(dataEntry)
+        self.setLayout(applicationLayout)
         self.show()
 
 if __name__ == '__main__':
