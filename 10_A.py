@@ -11,8 +11,10 @@ class MainWindow(QFrame):
     def __init__(self):
         super(MainWindow, self).__init__()
         buttonsLayout = QVBoxLayout()
-        button = QRadioButton('button')
-        buttonsLayout.addWidget(button)
+        celsiusButton = QRadioButton('Celsius')
+        fahrenheitButton = QRadioButton('Fahrenheit')
+        buttonsLayout.addWidget(celsiusButton)
+        buttonsLayout.addWidget(fahrenheitButton)
         self.setLayout(buttonsLayout)
         self.show()
 
